@@ -282,7 +282,7 @@ public class Login extends javax.swing.JFrame {
         }
 
         if (!success) {
-            JOptionPane.showMessageDialog(null, "Bobo mo");
+            JOptionPane.showMessageDialog(null, "Please enter the correct Username and Password");
         }
     }                                         
 
