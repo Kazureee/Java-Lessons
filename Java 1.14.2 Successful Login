@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.login;
+package login.system;
 
 /**
  *
- * @author Charles
+ * @author NUD-Student
  */
 public class SuccessLog extends javax.swing.JFrame {
 
@@ -27,53 +27,31 @@ public class SuccessLog extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        btnlogout = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Segoe Script", 1, 36)); // NOI18N
-        jLabel1.setText("Login Successful!!!");
-
-        btnlogout.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        btnlogout.setText("LOGOUT");
-        btnlogout.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnlogoutActionPerformed(evt);
-            }
-        });
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel1.setText("INPUT YOUR LAYOUT HERE...");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(66, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(52, 52, 52))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btnlogout)
-                        .addGap(15, 15, 15))))
+                .addGap(63, 63, 63)
+                .addComponent(jLabel1)
+                .addContainerGap(75, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(137, 137, 137)
+                .addGap(132, 132, 132)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 108, Short.MAX_VALUE)
-                .addComponent(btnlogout)
-                .addGap(15, 15, 15))
+                .addContainerGap(146, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>                        
-
-    private void btnlogoutActionPerformed(java.awt.event.ActionEvent evt) {                                          
-                Login log = new Login();
-                log.setVisible(true);
-                this.dispose();
-    }                                         
 
     /**
      * @param args the command line arguments
@@ -111,7 +89,6 @@ public class SuccessLog extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify                     
-    private javax.swing.JButton btnlogout;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration                   
 }
