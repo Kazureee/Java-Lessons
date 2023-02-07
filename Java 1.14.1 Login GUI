@@ -2,14 +2,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package com.mycompany.login;
+package login.system;
 
-import java.awt.Color;
+import static java.awt.Color.black;
+import static java.awt.Color.gray;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Charles
+ * @author NUD-Student
  */
 public class Login extends javax.swing.JFrame {
 
@@ -29,79 +30,53 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
-        jColorChooser1 = new javax.swing.JColorChooser();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
-        txtUser2 = new javax.swing.JTextField();
-        btnLogin2 = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        btnSignup4 = new javax.swing.JButton();
-        txtpas = new javax.swing.JPasswordField();
-        btnSignup5 = new javax.swing.JButton();
-        txtAlert = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        btnsignup = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        txtusername = new javax.swing.JTextField();
+        txtpas = new javax.swing.JPasswordField();
+        btnlogin = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
-            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
-                formWindowGainedFocus(evt);
-            }
-            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(67, 67, 255));
+
+        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 36)); // NOI18N
+        jLabel1.setText("LOGIN");
+
+        btnsignup.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        btnsignup.setForeground(java.awt.SystemColor.textHighlight);
+        btnsignup.setText("Signup");
+        btnsignup.setBorder(null);
+        btnsignup.setBorderPainted(false);
+        btnsignup.setContentAreaFilled(false);
+        btnsignup.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsignupActionPerformed(evt);
             }
         });
 
-        jPanel6.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
-        jPanel6.setForeground(new java.awt.Color(255, 255, 255));
-        jPanel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        jPanel6.setOpaque(false);
+        jLabel2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel2.setText("Not a member?");
 
-        jLabel5.setFont(new java.awt.Font("Arial", 1, 48)); // NOI18N
-        jLabel5.setText("LOGIN");
-
-        txtUser2.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtUser2.setForeground(new java.awt.Color(204, 204, 204));
-        txtUser2.setText("username");
-        txtUser2.addFocusListener(new java.awt.event.FocusAdapter() {
+        txtusername.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        txtusername.setForeground(java.awt.Color.gray);
+        txtusername.setText("username");
+        txtusername.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                txtUserFocusGained(evt);
+                txtusernameFocusGained(evt);
             }
             public void focusLost(java.awt.event.FocusEvent evt) {
-                txtUser2FocusLost(evt);
-            }
-        });
-        txtUser2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtUserActionPerformed(evt);
-            }
-        });
-
-        btnLogin2.setBackground(new java.awt.Color(22, 95, 167));
-        btnLogin2.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        btnLogin2.setForeground(new java.awt.Color(255, 255, 255));
-        btnLogin2.setText("Login");
-        btnLogin2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLogin2ActionPerformed(evt);
-            }
-        });
-
-        jLabel6.setText("Not a member? ");
-
-        btnSignup4.setForeground(java.awt.SystemColor.textHighlight);
-        btnSignup4.setText("Signup");
-        btnSignup4.setBorder(null);
-        btnSignup4.setBorderPainted(false);
-        btnSignup4.setContentAreaFilled(false);
-        btnSignup4.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnSignup4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSignupActionPerformed(evt);
+                txtusernameFocusLost(evt);
             }
         });
 
         txtpas.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        txtpas.setForeground(new java.awt.Color(204, 204, 204));
+        txtpas.setForeground(java.awt.Color.gray);
         txtpas.setText("password");
         txtpas.setEchoChar('\u0000');
         txtpas.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -113,177 +88,152 @@ public class Login extends javax.swing.JFrame {
             }
         });
 
-        btnSignup5.setForeground(java.awt.SystemColor.controlShadow);
-        btnSignup5.setText("Forgot password?");
-        btnSignup5.setBorder(null);
-        btnSignup5.setBorderPainted(false);
-        btnSignup5.setContentAreaFilled(false);
-        btnSignup5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        btnSignup5.addActionListener(new java.awt.event.ActionListener() {
+        btnlogin.setBackground(new java.awt.Color(29, 98, 168));
+        btnlogin.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        btnlogin.setForeground(new java.awt.Color(255, 255, 255));
+        btnlogin.setText("LOGIN");
+        btnlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSignup1ActionPerformed(evt);
+                btnloginActionPerformed(evt);
             }
         });
-
-        txtAlert.setText("Login Status:");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(117, 117, 117)
-                .addComponent(jLabel5)
-                .addContainerGap(118, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtAlert)
-                    .addComponent(btnSignup5)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnSignup4))
-                    .addComponent(btnLogin2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtpas, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtUser2, javax.swing.GroupLayout.PREFERRED_SIZE, 306, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel5)
-                .addGap(62, 62, 62)
-                .addComponent(txtUser2, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(txtpas, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSignup5)
-                .addGap(15, 15, 15)
-                .addComponent(btnLogin2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtAlert)
-                .addGap(36, 36, 36)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(btnSignup4))
-                .addGap(54, 54, 54))
-        );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 109, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(126, 126, 126)
+                        .addComponent(jLabel2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnsignup))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(146, 146, 146)
+                        .addComponent(jLabel1)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 62, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtusername)
+                    .addComponent(txtpas)
+                    .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 288, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(59, 59, 59))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 149, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addComponent(jLabel1)
+                .addGap(33, 33, 33)
+                .addComponent(txtusername, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(txtpas, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(btnlogin, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnsignup)
+                    .addComponent(jLabel2))
+                .addGap(94, 94, 94))
+        );
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(97, 97, 97)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(97, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(136, 136, 136))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(50, 50, 50)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, 457, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>                        
 
-    private void btnSignup1ActionPerformed(java.awt.event.ActionEvent evt) {                                           
-        // TODO add your handling code here:
-    }                                          
-
-    private void btnSignupActionPerformed(java.awt.event.ActionEvent evt) {                                          
-    Signup signup = new Signup();
-    signup.setVisible(true);
-    this.dispose();
-    }                                         
-
-    private void txtUserActionPerformed(java.awt.event.ActionEvent evt) {                                        
-
+    private void txtusernameFocusGained(java.awt.event.FocusEvent evt) {                                        
+        if (txtusername.getText().trim().equals("") || 
+           txtusername.getText().trim().toLowerCase().equals("username")) {
+        txtusername.setText(null);
+        txtusername.setForeground(black);
+        
+        }
     }                                       
 
-    private void txtUserFocusGained(java.awt.event.FocusEvent evt) {                                    
-         if(txtUser2.getText().trim().toLowerCase().equals("username"))
+    private void txtusernameFocusLost(java.awt.event.FocusEvent evt) {                                      
+        if(txtusername.getText().trim().equals("") || 
+           txtusername.getText().trim().toLowerCase().equals("username"))
         {
-            txtUser2.setText("");
-            txtUser2.setForeground(Color.black);
+            txtusername.setText("username");
+            txtusername.setForeground(gray);
         }
-    }                                   
-
-    private void txtUser2FocusLost(java.awt.event.FocusEvent evt) {                                   
-           if(txtUser2.getText().trim().equals("") || 
-           txtUser2.getText().trim().toLowerCase().equals("username"))
-        {
-            txtUser2.setText("username");
-            txtUser2.setForeground(new Color(204,204,204));
-        }
-    }                                  
+    }                                     
 
     private void txtpasFocusGained(java.awt.event.FocusEvent evt) {                                   
         String pass = String.valueOf(txtpas.getPassword());
-        if (txtpas.getText().equals("password")){
-        if(pass.trim().toLowerCase().equals("password"))
-        {
-            txtpas.setText(null);
-            txtpas.setForeground(Color.black);
-            txtpas.setEchoChar('*');
-        }
-        }
+         if(pass.trim().equals("") || 
+           pass.trim().toLowerCase().equals("password")){
+         txtpas.setText(null);
+         txtpas.setForeground(black);
+         txtpas.setEchoChar('•');
+         }
     }                                  
 
     private void txtpasFocusLost(java.awt.event.FocusEvent evt) {                                 
         String pass = String.valueOf(txtpas.getPassword());
         if (txtpas.getText().length()==0){
-        if(pass.trim().equals("") || 
-           pass.trim().toLowerCase().equals("password"))
-        {
-            txtpas.setText("password");
-            txtpas.setEchoChar('\u0000');
-            txtpas.setForeground(new Color(204,204,204));
+        if (pass.trim().toLowerCase().equals("")){
+        txtpas.setText("password");
+        txtpas.setForeground(gray);
+        txtpas.setEchoChar('\u0000');
         }
         }
     }                                
 
-    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {                                       
-        this.requestFocusInWindow();
-    }                                      
-
-    private void btnLogin2ActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    private void btnloginActionPerformed(java.awt.event.ActionEvent evt) {                                         
     String[] Username = {"user01", "user02", "user03"};
     String[] Password = {"0001", "0002", "0003"};
-    boolean success = false;
+    boolean sucess = false;
     
-        for (int i = 0; i < Username.length; i++) {
-            if (txtUser2.getText().equals(Username[i]) && txtpas.getText().equals(Password[i])) {
+    for (int i = 0; i < Username.length; i++) {
+            if (txtusername.getText().equals(Username[i]) && txtpas.getText().equals(Password[i])) {
                 SuccessLog log = new SuccessLog();
                 log.setVisible(true);
-                success = true;
+                sucess = true;
                 this.dispose();
                 break;
             }
         }
-
-        if (!success) {
+    if (!sucess) {
             JOptionPane.showMessageDialog(null, "Please enter the correct Username and Password");
         }
+    }                                        
+
+    private void btnsignupActionPerformed(java.awt.event.ActionEvent evt) {                                          
+    Signup signup = new Signup();
+    signup.setVisible(true);
+    this.dispose();
     }                                         
 
     /**
@@ -322,20 +272,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify                     
-    private javax.swing.JButton btnLogin2;
-    private javax.swing.JButton btnSignup4;
-    private javax.swing.JButton btnSignup5;
-    private javax.swing.JColorChooser jColorChooser1;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton btnlogin;
+    private javax.swing.JButton btnsignup;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel6;
-    private javax.swing.JLabel txtAlert;
-    private javax.swing.JTextField txtUser2;
     private javax.swing.JPasswordField txtpas;
+    private javax.swing.JTextField txtusername;
     // End of variables declaration                   
-
-    private void Close() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
 }
